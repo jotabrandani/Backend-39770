@@ -57,6 +57,8 @@ nuevo.addProduct({ title: 'otro producto', description: 'Este es otro producto',
 nuevo.addProduct({ title: 'producto prueba', description: 'Este es un producto prueba', price: 200, thumbnail: 'Sin imagen', code:'abc123', stock: 25 })
 nuevo.addProduct({ title: 'producto x', description: 'Este es un producto', price: 20, thumbnail: 'Sin imagen', code:'xxx123', stock: 10 })
 
+//let largo = nuevo.products.length
+//console.log (largo)
 
 nuevo.getProducts()
 nuevo.getProductById(2)
