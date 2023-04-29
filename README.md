@@ -1,19 +1,27 @@
+script.js
 
-Se entrega una clase “ProductManager” que gestiona productos.
 
-Cada producto cuenta las propiedades:
-title (nombre del producto)
-description (descripción del producto)
-price (precio)
-thumbnail (ruta de imagen)
-code (código identificador)
-stock (número de piezas disponibles)
+- Se modificó la clase ProductManager para que gestione un conjunto de productos de un archivo
 
-Se crea un método “addProduct” el cual agrega al arreglo de productos inicial.
+- La clase recibe como parámetro la ruta donde se creará el archivo y el constructor incluye esta ruta en la variable this.path
 
-Se genera un id automaticamente
+- addProduct agrega un producto al arreglo de productos del archivo.
+  El id se agrega e incrementa automaticamente
+  stock es opcional y si el usuario no lo envía se le asigna cero
+  En caso de éxito se devuelve el id del producto
+  En caso de error se devuelve un mensaje que dice: “addProduct: error”
 
-Se crea un método “getProducts” el cual devuelve el arreglo con todos los productos creados hasta ese momento
+- getProducts devuelve el arreglo con todos los productos guardados en el archivo y en caso de que no haya productos devuelve: “Not found”
+  En caso de error devuelve el mensaje: “getProducts: error”
 
-Tambien un método “getProductById” el cual busca en el arreglo el producto que coincida con el id
-En caso de no coincidir ningún id, muestra en consola un error “Not found”
+- getProductById recibe como parámetro el id del producto y devuelve un objeto con todas las propiedades del producto y en caso de no coincidir devuelve: “Not found”
+  En caso de error devuelve el mensaje: “getProductById: error”
+
+- updateProduct recibe un id y un objeto data con las propiedades a modificar del producto y en caso de no coincidir devuelve: “Not found”
+  En caso de éxito devuelve el mensaje:  “updateProduct: done”
+  En caso de error devuelve el mensaje: “updateProduct: error”
+
+- deleteProduct recibe como parámetro el id del producto y borra el producto del archivo y en caso de no coincidir devuelve: “Not found”
+  En caso de éxito devuelve un mensaje que dice:  “deleteProduct: done”
+  En caso de error devuelve un mensaje que dice: “deleteProduct: error”
+  
